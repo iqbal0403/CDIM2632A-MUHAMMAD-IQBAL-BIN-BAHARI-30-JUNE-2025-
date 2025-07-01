@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: lightgrey;
+  color: #000;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+/* === HEADER === */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: royalblue;
+  padding: 20px;
+  border-radius: 0 0 0 0;
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.site-title {
+  color: white;
+  font-size: 24px;
+}
+
+.header-logo {
+  position: absolute;
+  left: 20px;
+}
+
+.header-logo img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* === NAVIGATION === */
+.navigation {
+  background-color: #50545c;
+}
+
+.navigation ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 15px;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.navigation ul li {
+  margin: 5px 10px;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navigation ul li a.active,
+.navigation ul li a:hover {
+  color: royalblue;
+}
+
+/* === TITLE === */
+.title {
+  text-align: center;
+  margin: 30px 0 20px;
+}
+
+.title-box-centered {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+/* === MAIN CONTENT === */
+.edu-exp-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.edu-timeline-box {
+  background-color: #50545c;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  color: white;
+}
+
+.edu-timeline-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: royalblue;
+}
+
+.edu-timeline-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.timeline-item {
+  flex: 1;
+  text-align: center;
+  min-width: 250px;
+}
+
+.timeline-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.timeline-item img:hover {
+  transform: scale(1.03);
+}
+
+.timeline-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ddd;
+}
+
+.edu-timeline-box :hover {
+  transform: scale(1.03);
+} 
+
+/* === SIDE BOXES === */
+.side-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.edu-exp-box {
+  background-color: #50545c;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  color: white;
+  flex: 1;
+  min-width: 300px;
+}
+
+.edu-exp-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: royalblue;
+}
+
+.edu-exp-box :hover {
+  transform: scale(1.03);
+} 
+
+.assignment-content-box {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px black;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.assignment-description {
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.certificate-img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.certificate-img:hover {
+  transform: scale(1.03);
+}
+
+/* === FOOTER === */
+footer {
+  background-color: royalblue;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .logo-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-logo {
+    position: static;
+    margin-bottom: 10px;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .edu-timeline-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-item {
+    min-width: 100%;
+  }
+
+  .side-boxes {
+    flex-direction: column;
+  }
+}
