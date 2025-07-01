@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* VIDEO BACKGROUND */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* BUTANG HOME */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon {
+  background: royalblue; /* box biru */
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo-icon a {
+  color: white !important; /* tulisan putih */
+  text-decoration: none;
+}
+
+.logo-icon a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.intro-section {
+  padding: 80px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.intro-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: royalblue; /* garis biru */
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.student-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.student-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* kotak gambar bulat */
+  object-fit: cover;
+  border: 5px solid rgba(79, 70, 229, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.student-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.info-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: royalblue; /* title biru */
+  font-size: 1.1rem;
+}
+
+.info-box p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.info-box a {
+  color: royalblue; /* link biru */
+  text-decoration: none;
+}
+
+.info-box a:hover {
+  color: #818cf8;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .intro-container {
+    padding: 30px 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .student-card {
+    flex-direction: column;
+  }
+
+  .student-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .student-image {
+    width: 150px;
+    height: 150px;
+  }
+}
